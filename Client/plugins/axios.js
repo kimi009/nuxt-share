@@ -3,6 +3,7 @@ export default function({ $axios, redirect }) {
   $axios.interceptors.request.use(
     (config) => {
       // console.log('axios config')
+      // global.console.log(process.env.baseURL)
       config.baseURL = 'http://localhost:6010'
       return config
     },

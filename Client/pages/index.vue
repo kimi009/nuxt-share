@@ -40,14 +40,15 @@ import ProductDes from '@/components/Home/ProductDes'
 import Test from '@/components/Test/Index'
 export default {
   layout: 'home',
+  // middleware: 'auth',
   components: {
     Banner,
     ProductDes,
     Test
   },
-  async asyncData({ store, $axios }) {
+  async asyncData({ store, $axios, userAgent }) {
     const { list } = await $axios.get('/home/navInfo')
-    global.console.log('index', list)
+    global.console.log('index', userAgent)
     store.commit('home/setMenuList', list)
     const { product } = await $axios.get('/home/productInfo')
     // global.console.log(product)

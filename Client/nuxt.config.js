@@ -1,5 +1,8 @@
 module.exports = {
   mode: 'universal',
+  env: {
+    baseURL: 'http://localhost:6011'
+  },
   /*
    ** Headers of the page
    */
@@ -23,9 +26,7 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: [
-    '@assets/css/normalize.css'
-  ],
+  css: ['@assets/css/normalize.css', '@assets/css/main.css'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -46,6 +47,9 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios'
   ],
+  router: {
+    middleware: 'auth'
+  },
   bootstrapVue: {
     // bootstrapCSS: false, // Or `css: false`
     // bootstrapVueCSS: false, // Or `bvCSS: false`
