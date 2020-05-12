@@ -23,9 +23,9 @@ module.exports = {
       host: '203.195.150.105',
       ref: 'origin/master',
       repo: 'git@github.com:kimi009/nuxt-share.git',
-      path: '/web/nuxt-share/Client',
+      path: '/web/nuxt-share',
       'post-deploy':
-        'npm install && npm run build && pm2 reload ecosystem.config.js --only Nuxt-Share --env prod'
+        'cd /web/nuxt-share/source/Client && npm install && npm run build && pm2 reload ecosystem.config.js --only Nuxt-Share --env prod'
     }
   }
 }
