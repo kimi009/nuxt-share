@@ -18,7 +18,7 @@ module.exports = {
     }
   ],
   deploy: {
-    dev: {
+    prod: {
       user: 'root',
       host: '203.195.150.105',
       ref: 'origin/master',
