@@ -25,6 +25,11 @@ app.use(
 	})
 )
 
+app.use(async (ctx,next)=>{
+	ctx.baseUrl = 'http://203.195.150.105/api'
+	await next()
+})
+
 app.use(async (ctx, next) => {
 	ctx.set('Access-Control-Allow-Origin', '*')
 	ctx.set(
