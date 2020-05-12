@@ -78,7 +78,7 @@ router.get('/navInfo', async (ctx) => {
 })
 
 router.get('/productInfo', async (ctx) => {
-	
+	console.log(81, ctx.baseUrl)
 	const data = {
 		title: '稳定安全 全球服务的华为云计算产品',
 		subTitle: '120+云产品，助力业务敏捷上云',
