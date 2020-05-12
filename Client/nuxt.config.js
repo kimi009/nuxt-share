@@ -28,9 +28,9 @@ module.exports = {
    */
   css: ['@assets/css/normalize.css', '@assets/css/main.css'],
   /*
-   ** Plugins to load before mounting the App
+   ** Plugins to load before mounting the App 下一个版本可能会使用mode：client/server来判断
    */
-  plugins: ['@/plugins/axios'],
+  plugins: ['@/plugins/axios', { src: '@/plugins/pTest', ssr: false }],
   /*
    ** Nuxt.js dev-modules
    */

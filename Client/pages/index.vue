@@ -46,7 +46,8 @@ export default {
     ProductDes,
     Test
   },
-  async asyncData({ store, $axios, userAgent }) {
+  async asyncData({ app, store, $axios, userAgent }) {
+    // app.$print('asyncData===>我是自定义插件pTest')
     const { list } = await $axios.get('/home/navInfo')
     global.console.log('index', userAgent)
     store.commit('home/setMenuList', list)
@@ -66,6 +67,9 @@ export default {
     ...mapState({
       productInfo: (state) => state.home.productInfo
     })
+  },
+  mounted() {
+    this.$print('mounted===>我是插件pTest')
   },
   head() {
     return {
