@@ -24,7 +24,6 @@ app.use(
 		extendTypes: ['json', 'form', 'text']
 	})
 )
-
 app.use(async (ctx,next)=>{
 	ctx.baseUrl = 'http://203.195.150.105/api'
 	await next()

@@ -11,7 +11,7 @@
                 <img
                   class="align-self-center"
                   style="width:33px;height:33px;"
-                  src="http://localhost:6010/img/icon.png"
+                  src="http://203.195.150.105/api/img/icon.png"
                 />
                 <span class="ml-3">{{ item.title }}</span>
               </div>
