@@ -149,26 +149,27 @@ router.get("/productInfo", async ctx => {
 });
 
 router.get("/banner", async ctx => {
+  const origin  = ctx.origin
   const data = [
     {
       caption: "我是第一张",
       text: " mollis interdum.Nulla vitae elit libero, a pharetra augue",
-      src: "http://localhost:6010/1.jpg"
+      src: `${origin}/1.jpg`
     },
     {
       caption: "我是第二张",
       text: "elit libero, a pharetra augue m Nulla vitae ollis interdum.",
-      src: "http://localhost:6010/1.jpg"
+      src: `${origin}/1.jpg`
     },
     {
       caption: "我是第三张",
       text: "la vitae elit libetra augue mollro, a pNulhareis interdum.",
-      src: "http://localhost:6010/1.jpg"
+      src: `${origin}/1.jpg`
     },
     {
       caption: "我是第四张",
       text: "aretra augue mollis inNulla vitae elit libero, a phterdum.",
-      src: "http://localhost:6010/1.jpg"
+      src: `${origin}/1.jpg`
     }
   ];
   let banners = await Promise.resolve(data);
