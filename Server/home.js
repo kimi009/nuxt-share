@@ -150,6 +150,7 @@ router.get("/productInfo", async ctx => {
 
 router.get("/banner", async ctx => {
   const origin  = ctx.origin
+  console.log(ctx)
   const data = [
     {
       caption: "我是第一张",
