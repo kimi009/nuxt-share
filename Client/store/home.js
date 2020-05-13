@@ -1,4 +1,9 @@
-export const state = () => ({ menuList: [], productInfo: {}, banners: [] })
+export const state = () => ({
+  menuList: [],
+  productInfo: {},
+  banners: [],
+  temp: {}
+})
 
 export const mutations = {
   setMenuList(state, value) {
@@ -10,6 +15,9 @@ export const mutations = {
   },
   setBanners(state, value) {
     state.banners = value
+  },
+  setTempTest(state, value) {
+    state.temp = value
   }
 }
 

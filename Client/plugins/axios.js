@@ -5,7 +5,7 @@ export default function({ $axios, redirect }) {
       // console.log('axios config')
       // global.console.log(process.env.baseURL)
       // http://localhost:6010
-      config.baseURL = 'http://203.195.150.105/api'
+      config.baseURL = process.env.baseURL
       return config
     },
     (error) => {

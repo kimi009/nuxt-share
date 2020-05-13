@@ -46,7 +46,16 @@ export default {
     ProductDes,
     Test
   },
+  validate({ params, query, store }) {
+    global.console.log('生命周期---validate')
+    return true
+  },
+  fetch({ store, params }) {
+    global.console.log('生命周期---fetch')
+    store.commit('home/setTempTest', 333)
+  },
   async asyncData({ app, store, $axios, userAgent }) {
+    global.console.log('生命周期---asyncData')
     // app.$print('asyncData===>我是自定义插件pTest')
     const { list } = await $axios.get('/home/navInfo')
     global.console.log('index', userAgent)

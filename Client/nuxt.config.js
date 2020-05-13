@@ -1,7 +1,7 @@
 module.exports = {
   mode: 'universal',
   env: {
-    baseURL: 'http://localhost:6011'
+    baseURL: 'http://203.195.150.105/api'
   },
   /*
    ** Headers of the page
