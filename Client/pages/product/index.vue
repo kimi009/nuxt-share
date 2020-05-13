@@ -14,7 +14,7 @@ export default {
     ProductDes
   },
   async asyncData({ store, $axios }) {
-    const { product } = await $axios.get('/product/info')
+    const { product } = await $axios.get('/api/product/info')
     return { product }
   },
   data() {

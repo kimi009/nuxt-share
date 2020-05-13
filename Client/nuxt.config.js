@@ -50,6 +50,15 @@ module.exports = {
   router: {
     middleware: 'auth'
   },
+  proxy: {
+    '/api': {
+      target: 'http://203.195.150.105/api',
+      pathRewrite: {
+        '^/api': '/',
+        changeOrigin: true
+      }
+    }
+  },
   bootstrapVue: {
     // bootstrapCSS: false, // Or `css: false`
     // bootstrapVueCSS: false, // Or `bvCSS: false`
