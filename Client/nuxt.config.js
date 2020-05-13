@@ -1,7 +1,7 @@
 module.exports = {
   mode: 'universal',
   env: {
-    baseURL: 'http://203.195.150.105/api'
+    baseURL: 'http://203.195.150.105'
   },
   /*
    ** Headers of the page
@@ -45,17 +45,23 @@ module.exports = {
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy',
   ],
   router: {
     middleware: 'auth'
   },
+  axios: {
+    // proxy: true,
+    prefix: 'http://203.195.150.105/api',
+    credentials: true
+  },
   proxy: {
     '/api': {
       target: 'http://203.195.150.105/api',
+      changeOrigin: true,
       pathRewrite: {
-        '^/api': '/',
-        changeOrigin: true
+        '^/api': ''
       }
     }
   },

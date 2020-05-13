@@ -57,13 +57,13 @@ export default {
   async asyncData({ app, store, $axios, userAgent }) {
     global.console.log('生命周期---asyncData')
     // app.$print('asyncData===>我是自定义插件pTest')
-    const { list } = await $axios.get('/home/navInfo')
+    const { list } = await $axios.get('/api/home/navInfo')
     global.console.log('index', userAgent)
     store.commit('home/setMenuList', list)
-    const { product } = await $axios.get('/home/productInfo')
+    const { product } = await $axios.get('/api/home/productInfo')
     // global.console.log(product)
     store.commit('home/setProductInfo', product)
-    const { banners } = await $axios.get('/home/banner')
+    const { banners } = await $axios.get('/api/home/banner')
     store.commit('home/setBanners', banners)
     // return { list: [] }
   },

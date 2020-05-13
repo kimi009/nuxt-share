@@ -5,7 +5,7 @@ export default function({ $axios, redirect }) {
       // console.log('axios config')
       // global.console.log(process.env.baseURL)
       // http://localhost:6010
-      config.baseURL = process.env.baseURL
+      // config.baseURL = process.env.baseURL
       return config
     },
     (error) => {
@@ -20,7 +20,7 @@ export default function({ $axios, redirect }) {
   $axios.interceptors.response.use(
     (response) => {
       const res = response.data
-      // global.console.log('响应数据', res)
+      global.console.log('响应数据', res)
       if (res.code === 1000) {
         return res.data
       } else {
