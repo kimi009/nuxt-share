@@ -6,6 +6,7 @@
   1. 开发工具： vscode
   2. 开发语言： vue
   3. 开发框架： Nuxt.js + koa
+  4. 部署： nginx + pm2
 ```
 
 **项目目录说明**
