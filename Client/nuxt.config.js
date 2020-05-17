@@ -45,26 +45,26 @@ module.exports = {
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
-    // '@nuxtjs/proxy',
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy'
   ],
   router: {
     middleware: 'auth'
   },
   axios: {
-    // proxy: true,
-    prefix: 'http://203.195.150.105/api',
+    proxy: true,
+    prefix: '/api',
     credentials: true
   },
-  // proxy: {
-  //   '/api': {
-  //     target: 'http://203.195.150.105/api',
-  //     changeOrigin: true,
-  //     pathRewrite: {
-  //       '^/api': ''
-  //     }
-  //   }
-  // },
+  proxy: {
+    '/api': {
+      target: 'http://203.195.150.105/api',
+      changeOrigin: true,
+      pathRewrite: {
+        '^/api': ''
+      }
+    }
+  },
   bootstrapVue: {
     // bootstrapCSS: false, // Or `css: false`
     // bootstrapVueCSS: false, // Or `bvCSS: false`

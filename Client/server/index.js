@@ -20,6 +20,7 @@ async function start() {
   await nuxt.ready()
   // Build in development
   if (config.dev) {
+    console.log('当前环境是开发环境')
     const builder = new Builder(nuxt)
     await builder.build()
   }
